@@ -1,0 +1,50 @@
+`timescale 1ns/1ps
+
+// =====================================================
+// 1. GATE-LEVEL MODEL
+// =====================================================
+module half_adder_gate (
+    input logic a,
+    input logic b,
+    output logic sum,
+    output logic carry
+);
+
+    xor (sum, a, b);
+    and (carry, a, b);
+
+endmodule
+
+
+// =====================================================
+// 2. DATAFLOW MODEL
+// =====================================================
+module half_adder_dataflow (
+    input logic a,
+    input logic b,
+    output logic sum,
+    output logic carry
+);
+
+    assign sum = a ^ b;
+    assign carry = a & b;
+
+endmodule
+
+
+// =====================================================
+// 3. BEHAVIORAL MODEL
+// =====================================================
+module half_adder_behavioral (
+    input logic a,
+    input logic b,
+    output logic sum,
+    output logic carry
+);
+
+    always_comb begin
+        sum = a ^ b;
+        carry = a & b;
+    end
+
+endmodule
