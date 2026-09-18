@@ -45,10 +45,10 @@ The experiments cover RTL design, testbench creation, transaction-level modeling
 ## 🚀 How to Run
 1. Clone the repository:
    
-   git clone https://github.com/your-username/SystemVerilog-Lab.git
-   cd SystemVerilog-Lab
+   git clone 
    
 2.Navigate to any experiment folder:
+
    cd exp01_and_gate
 
 
