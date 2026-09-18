@@ -7,7 +7,19 @@ The experiments cover RTL design, testbench creation, transaction-level modeling
 ---
 
 ## 📂 Repository Structure
-
+SystemVerilog-Lab/
+├── exp01_and_gate/
+├── exp02_half_adder/
+├── exp03_process_communication/
+├── exp04_transaction_randomization/
+├── exp05_generator_driver_environment/
+├── exp06_monitor_scoreboard_coverage/
+├── exp07_half_full_adder_tb/
+├── exp08_nbit_adder_tb/
+├── exp09_dff_tb/
+├── exp10_counters_tb/
+├── lfsr_crc_project
+└── README.md
 ---
 
 ## 🧪 Experiments Included
@@ -45,10 +57,49 @@ The experiments cover RTL design, testbench creation, transaction-level modeling
 ## 🚀 How to Run
 1. Clone the repository:
    
-   git clone 
+   git clone https://github.com/Saranya131105/SYSTEM-VERILOG
    
 2.Navigate to any experiment folder:
 
    cd exp01_and_gate
+
+3.Compile and run using Verilator:
+
+   verilator --cc and_gate.sv tb_and_gate.sv --exe sim_main.cpp
+   make -C obj_dir -f Vtb_and_gate.mk Vtb_and_gate
+   ./obj_dir/Vtb_and_gate
+   
+4.Or using Icarus Verilog (alternative):
+
+iverilog -g2012 -o sim_and_gate and_gate.sv tb_and_gate.sv
+vvp sim_and_gate
+View waveforms:
+
+5. View waveforms:
+
+gtkwave and_gate.vcd
+
+
+
+🎯 Outcomes
+Hands-on experience with RTL design and verification.
+
+Exposure to transaction-level modeling and class-based testbenches.
+
+Understanding of functional coverage, scoreboarding, and constrained random verification.
+
+Verification of both combinational and sequential circuits using SystemVerilog.
+
+
+📖 License
+This repository is for academic and learning purposes.
+Feel free to fork, modify, and use for educational projects.
+
+
+👩‍💻 Author
+Saranya Manoharan – Electronics & Communication Engineering
+Rajalakshmi Institute of Technology, Chennai
+
+
 
 
